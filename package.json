@@ -1,0 +1,34 @@
+{
+  "name": "slack-yaml-user-list",
+  "version": "1.0.0",
+  "description": "Get all users from a slack channel to a yaml parsed file",
+  "main": "src/index.js",
+  "scripts": {
+    "start-prod": "node src/index.js",
+    "start-dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Its-Alex/slack-yaml-user-list.git"
+  },
+  "keywords": [
+    "slack",
+    "users",
+    "simple"
+  ],
+  "author": "ItsAlex",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Its-Alex/slack-yaml-user-list/issues"
+  },
+  "homepage": "https://github.com/Its-Alex/slack-yaml-user-list#readme",
+  "devDependencies": {
+    "nodemon": "^1.17.5",
+    "standard": "^11.0.1"
+  },
+  "dependencies": {
+    "@slack/client": "^4.3.1",
+    "async": "^2.6.1",
+    "js-yaml": "^3.12.0"
+  }
+}

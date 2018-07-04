@@ -59,3 +59,10 @@ typings/
 
 # next.js build output
 .next
+
+# do not import env
+.envrc
+
+# Project
+users.yaml
+users.json
