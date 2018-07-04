@@ -20,15 +20,28 @@ let main = async () => {
   }
 
   users.members.forEach(user => {
-    if (!user.is_bot && !user.deleted) results.push(user.profile)
+    if (!user.is_bot && !user.deleted) {
+      results.push({
+        firstname: user.profile.first_name,
+        lastname: user.profile.last_name,
+        image_72: user.profile.image_72,
+        image_192: user.profile.image_192,
+        title: user.profile.title
+      })
+    }
   })
 
-  fs.writeFileSync('./users.yaml', yaml.safeDump(results, {
-    'styles': {
-      '!!null': 'canonical'
-    },
-    'sortKeys': true
-  }))
+  try {
+    fs.writeFileSync('./users.yaml', yaml.safeDump(results, {
+      'styles': {
+        '!!null': 'canonical'
+      },
+      'sortKeys': true,
+      'skipInvalid': true
+    }))
+  } catch (err) {
+    console.log(err)
+  }
 }
 
 main()
