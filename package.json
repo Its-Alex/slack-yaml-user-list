@@ -24,7 +24,7 @@
   "homepage": "https://github.com/Its-Alex/slack-yaml-user-list#readme",
   "devDependencies": {
     "nodemon": "1.18.4",
-    "standard": "11.0.1"
+    "standard": "12.0.1"
   },
   "dependencies": {
     "@slack/client": "^4.3.1",
