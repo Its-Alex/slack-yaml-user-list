@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM node:16-alpine
 
 ADD src /slack-yaml-user-list/src/
 COPY package.json /slack-yaml-user-list/package.json
